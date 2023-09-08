@@ -6,6 +6,7 @@
  -I then created a database called PortfolioProject in Azure SQL Studio and uploaded those two datasets to the database to begin manipulating 
  and working with the data
 -Primarily I looked at the U.S. just because that's the country where I'm from 
+-Visualized on Tableau at: https://public.tableau.com/app/profile/patrick.lutz/viz/CovidDashboard1_16859910334760/Dashboard1
 
  Skills Used: Joins, CTE's, Temp tables, Window Functions, Aggregate Functions, creating views, Converting data types
 */
