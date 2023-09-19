@@ -1,16 +1,14 @@
-/*Covid-19 SQL Data Exploration Project #1 
- -I used the Covid-19 Deaths excel dataset downloaded from https://ourworldindata.org/covid-deaths spanning from 1.3.2020-5.10.23
- -This dataset uses the World Health Organization or WHO data. 
- -I reformmated this excel dataset in excel just slightly to make the SQL data exploration easier thereby creating a coviddeathdata1.xlsx dataset   
- and a covidvacdata1.xlsx dataset.
- -I then created a database called PortfolioProject in Azure SQL Studio and uploaded those two datasets to the database to begin manipulating 
- and working with the data
--Primarily I looked at the U.S. just because that's the country where I'm from 
--Visualized on Tableau at: https://public.tableau.com/app/profile/patrick.lutz/viz/CovidDashboard1_16859910334760/Dashboard1
+/*Covid-19 SQL Data Exploration Project */
+ /* Project: This Covid-19 dataset was compiled by ourworldindata.org using the World Health Organization(WHO) Covid-19 data spanning from 1.3.2020-5.10.23 */
+ /* Purpose: The motivation for this project was to explore the global death, infection, and vaccination rates during the COVID-19 pandemic 
+     and to determine which countries were affected the most by the COVID-19 Pandemic */ 
+ /* I analyzed countries by their total deaths, reported infections, total vaccinations, and population */
+/* Programmer: Patrick Lutz */
+/* Date: 9/19/23 */
+/* Visualized on Tableau at: https://public.tableau.com/app/profile/patrick.lutz/viz/CovidDashboard1_16859910334760/Dashboard1
+/* Skills Used: Joins, CTEs, Temp tables, Window Functions, Aggregate Functions, creating views, Converting data types */
 
- Skills Used: Joins, CTE's, Temp tables, Window Functions, Aggregate Functions, creating views, Converting data types
-*/
-
+/*In Excel I reformatted and split the original dataset into two separate datasets (coviddeathdata1, covidvacdata1) in order to not have to JOIN on every query */
 /*run a query on both datasets to make sure they look right*/
 select *
 from PortfolioProject..coviddeathdata1
@@ -38,7 +36,7 @@ ALTER TABLE PortfolioProject..coviddeathdata1
     ALTER COLUMN total_deaths FLOAT NULL;
 
 /*Looking at total cases vs. Total Deaths*/
-/*Shows likelihood of dying if you contraact covid in the U.S.*/
+/*Shows likelihood of dying if you contract covid in the U.S.*/
 select  Location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 from PortfolioProject..coviddeathdata1
 -- Looking at my home country, United States
