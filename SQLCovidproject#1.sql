@@ -8,7 +8,7 @@
 /* Visualized on Tableau at: https://public.tableau.com/app/profile/patrick.lutz/viz/CovidDashboard1_16859910334760/Dashboard1
 /* Skills Used: Joins, CTEs, Temp tables, Window Functions, Aggregate Functions, creating views, Converting data types */
 
-/*In Excel I reformatted and split the original dataset into two separate datasets (coviddeathdata1, covidvacdata1) in order to not have to JOIN on every query */
+/*In Excel I reformatted and split the original dataset into two separate datasets (coviddeathdata1, covidvacdata1) in order to avoid having to JOIN on every query */
 /*run a query on both datasets to make sure they look right*/
 select *
 from PortfolioProject..coviddeathdata1
